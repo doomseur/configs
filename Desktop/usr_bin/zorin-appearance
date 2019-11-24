@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'zorin-appearance==3.0','gui_scripts','zorin-appearance'
+__requires__ = 'zorin-appearance==3.0'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('zorin-appearance==3.0', 'gui_scripts', 'zorin-appearance')()
+    )
